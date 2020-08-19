@@ -1,0 +1,47 @@
+@mixin font-style($family, $spacing, $weight) {
+  font-family: $family;
+  letter-spacing: $spacing;
+  font-weight: $weight;
+}
+
+$fonts-map: (base: $base-font, second: $second-font, third: $third-font, fourth: $fourth-font);
+$fonts-list: base, second, third, fourth;
+
+@each $font in $fonts-list {
+  .#{$font}-narrow-bold {
+    @include font-style(map-get($fonts-map, $font), -1px, 900);
+  }
+
+  .#{$font}-narrow-light {
+    @include font-style(map-get($fonts-map, $font), -1px, 100);
+  }
+
+  .#{$font}-wide-bold {
+    @include font-style(map-get($fonts-map, $font), 3px, 900);
+  }
+  .#{$font}-wide-light {
+    @include font-style(map-get($fonts-map, $font), 3px, 100);
+  }
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.captial {
+  text-transform: capitalize;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+

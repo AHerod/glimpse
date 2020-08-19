@@ -1,0 +1,99 @@
+/*------------------*
+# Base
+*------------------*/
+
+html {
+  box-sizing: border-box;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  overflow-y: scroll;
+  min-height: 100%;
+  word-wrap: break-word;
+  font-weight: 700;
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  background: $main-light-color;
+}
+
+.page-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+.screen {
+  border: 4px solid $main-dark-color;
+  padding: 15px;
+  //height: 90vh;
+}
+
+.block {
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.red-block {
+  background: $main-dark-color;
+  display: list-item;
+  color: transparent;
+}
+
+.black-block {
+  background: $color-black;
+  display: list-item;
+  color: transparent;
+}
+
+.transparent-block {
+  background: transparent;
+  display: list-item;
+  color: transparent;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+.vertical-upright {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.flip {
+  -webkit-transform:rotate(-180deg);
+  -moz-transform:rotate(-180deg);
+  -o-transform:rotate(-180deg);
+  transform:rotate(-180deg);
+  ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+
+.row {
+  display: flex;
+}

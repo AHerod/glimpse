@@ -1,0 +1,38 @@
+/*------------------*
+# Nav
+*------------------*/
+
+.nav__wrapper {
+  height: 100vh;
+}
+nav {
+  background: #333;
+  border-bottom-right-radius: 5px;
+  left: 0;
+  padding: 1rem;
+  top: 0;
+  opacity: 0.1;
+  transition: all .3s ease-in;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+
+  &:hover {
+    opacity: 1;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a {
+    color: #f9f9f9;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
