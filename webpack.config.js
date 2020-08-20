@@ -36,10 +36,10 @@ module.exports = (env) => {
             fallback: 'style-loader',
           }),
         },
-        // {
-        //   test: /\.models$/,
-        //   loader: 'webpack-models-loader'
-        // }
+        {
+          test: /\.html$/,
+          loader: 'html-loader'
+        }
       ],
     },
     plugins: [
