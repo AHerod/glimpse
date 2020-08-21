@@ -1,0 +1,10 @@
+.controls-panel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: block;
+  width: 200px;
+  .camera-switch {
+    width: 50px;
+  }
+}

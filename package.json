@@ -32,6 +32,7 @@
     "html-loader": "^1.2.1",
     "import-three-examples": "^2.2.4",
     "imports-loader": "^1.1.0",
+    "jquery": "^3.5.1",
     "node-sass": "^4.8.3",
     "prettier": "^2.0.4",
     "sass-loader": "^6.0.7",
