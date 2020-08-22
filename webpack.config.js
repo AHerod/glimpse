@@ -26,7 +26,7 @@ module.exports = (env) => {
           test: /\.css$/,
           use: ExtractTextPlugin.extract({
             use: ['css-loader'],
-            fallback: 'style-loader',
+            fallback: ['style-loader', 'css-loader'],
           }),
         },
         {
@@ -37,9 +37,15 @@ module.exports = (env) => {
           }),
         },
         {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: [
+            'file-loader',
+          ],
+        },
+        {
           test: /\.html$/,
           loader: 'html-loader'
-        }
+        },
       ],
     },
     plugins: [
@@ -48,3 +54,4 @@ module.exports = (env) => {
   },
   ]
 }
+

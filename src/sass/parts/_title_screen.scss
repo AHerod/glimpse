@@ -1,0 +1,26 @@
+.title-screen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $main-light-color;
+
+  h1 {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 80px;
+    transform: translateX(-50%);
+  }
+
+  &_eye {
+    position: absolute;
+    right: 10%;
+    pointer-events: none;
+
+    img {
+      width: 450px;
+    }
+  }
+}
