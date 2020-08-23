@@ -36,9 +36,8 @@ body {
 .page-width {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
   width: 100%;
 }
 
@@ -96,4 +95,15 @@ body {
 
 .row {
   display: flex;
+}
+.paper-layer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+  background: url("./../assets/img/oldpaper.jpg") no-repeat center;
+  background-size: cover;
+  opacity: .3;
 }

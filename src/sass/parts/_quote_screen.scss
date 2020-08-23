@@ -1,0 +1,76 @@
+.quote-screen {
+  max-width: 1400px;
+  margin-top: 300px;
+
+  .quote-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $fourth-font;
+    letter-spacing: 1.5px;
+
+    > h2 {
+      align-self: flex-end;
+      font-size: 3rem;
+      line-height: 2rem;
+      margin-bottom: -20px;
+      position: relative;
+      font-family: $third-font;
+
+      &::before {
+        position: absolute;
+        content: '';
+        background: $main-dark-color;
+        width: 90%;
+        height: 110vh;
+        top: 120%;
+        left: 0;
+      }
+    }
+  }
+
+  .quote-mark {
+    font-size: 45rem;
+    font-family: $third-font;
+    color: $main-dark-color;
+    margin-top: -50px;
+    line-height: 32rem;
+  }
+
+  .quote-block {
+    margin-left: -170px;
+
+    h1 {
+      font-size: 5rem;
+
+      span {
+        color: $main-dark-color;
+      }
+
+      &:first-of-type {
+        span {
+          position: relative;
+
+          &::before {
+            content: '';
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: $color-black;
+            position: absolute;
+            bottom: -35%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+
+  > h2 {
+    text-align: right;
+    font-size: 3rem;
+    font-family: $third-font;
+  }
+}
