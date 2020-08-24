@@ -1,7 +1,71 @@
+.eye-screen {
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .eye {
+    width: 300px;
+    height: 250px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: block;
+    pointer-events: none;
+    background: url("./../assets/img/eye.png") no-repeat center;
+    background-size: cover;
+    margin-top: -110px;
+
+    animation: pulse 2s infinite;
+    position: relative;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 50px;
+      background: #f12105;
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: rotate(35deg);
+    }
+
+    &::after {
+      top: auto;
+      left: -50%;
+      bottom: 0;
+    }
+
+    &:hover {
+      border: 10px solid gold;
+      &::after {
+        top: 40%;
+        left: 0;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+    }
+
+    70% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0.95);
+    }
+  }
+
+}
 .title-screen {
   height: 100vh;
   max-height: 1080px;
   display: flex;
+  position: relative;
 
   .left-box {
     position: relative;
@@ -15,7 +79,6 @@
     }
 
     .red-box {
-      //clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
       background: $main-dark-color;
       height: 70vh;
       width: 40vw;

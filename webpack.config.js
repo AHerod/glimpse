@@ -1,6 +1,7 @@
 const path = require('path')
 const cssOutput = 'styles.css'
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack');
 
 
 module.exports = (env) => {
@@ -56,7 +57,23 @@ module.exports = (env) => {
     },
     plugins: [
       new ExtractTextPlugin(cssOutput),
+      new webpack.ProvidePlugin({
+        jQuery: "jquery",
+        $: "jquery",
+        jquery: "jquery"
+      })
     ],
+    resolve: {
+      alias: {
+        "TweenLite": path.resolve('node_modules', './gsap/src/uncompressed/TweenLite.js'),
+        "TweenMax": path.resolve('node_modules', './gsap/src/uncompressed/TweenMax.js'),
+        "TimelineLite": path.resolve('node_modules', '/gsap/src/uncompressed/TimelineLite.js'),
+        "TimelineMax": path.resolve('node_modules', './gsap/src/uncompressed/TimelineMax.js'),
+        "ScrollMagic": path.resolve('node_modules', './scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+        "animation.gsap": path.resolve('node_modules', './scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+        "debug.addIndicators": path.resolve('node_modules', './scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
+      }
+    },
   },
   ]
 }

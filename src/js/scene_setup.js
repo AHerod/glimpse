@@ -1,5 +1,3 @@
-import $ from 'jquery'
-
 console.log('main screen')
 
 import * as THREE from 'three'

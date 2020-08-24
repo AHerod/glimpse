@@ -101,7 +101,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: block;
-  z-index: 1;
+  z-index: 999;
   pointer-events: none;
   background: url("./../assets/img/oldpaper.jpg") no-repeat center;
   background-size: cover;
