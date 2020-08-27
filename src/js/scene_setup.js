@@ -3,6 +3,8 @@ console.log('main screen')
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { ControlsPanel } from './globals'
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
 
 // point lights imports
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
@@ -69,12 +71,13 @@ function init() {
   scene.add(grid)
   // end development mode
 
+
   const light = new THREE.AmbientLight(0x404040) // soft white light
   scene.add(light)
   geometry = new THREE.PlaneBufferGeometry()
   material = new THREE.MeshNormalMaterial({ side: THREE.DoubleSide })
 
-  const count = 4
+  const count = 1
   const radius = 2
 
   for (let i = 0; i < count; i++) {
@@ -105,6 +108,8 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight)
 
 }
+
+
 
 // particlesJS.load('particles-js', 'assets/particles-config.json', function() {
 //   console.log('callback - particles.js config loaded')

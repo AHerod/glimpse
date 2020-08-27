@@ -6,11 +6,15 @@ const webpack = require('webpack');
 
 module.exports = (env) => {
   return [{
-    entry: { main: './src/index.js' },
+    entry: {
+      main: './src/index.js',
+      cubes: './src/cubes_index.js',
+      spheres: './src/spheres_index.js'
+    },
     output: {
       publicPath: '/public/',
       path: path.resolve(__dirname, 'public'),
-      filename: 'bundle.js',
+      filename: '[name]_bundle.js',
     },
     devServer: {
       publicPath: '/public/',
